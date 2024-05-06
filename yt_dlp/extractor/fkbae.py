@@ -4,14 +4,14 @@ import re
 
 
 class FKBAEIE(InfoExtractor):
-    _VALID_URL = r'https?://(?:stream\.|)fkbae\.to/(?P<id>[0-9]+)/'
+    _VALID_URL = r'https://fkbae\.to/(?P<id>\d+)/?'
     _TESTS = [{
         'url': 'https://fkbae.to/9778/',
-        'md5': 'fc12bce4a9c1335f153500c8fea6e1a8',
+        'md5': '490496174de8ab8dbf69317ca8d79418',
         'info_dict': {
             'id': '9778',
             'ext': 'mp4',
-            'title': '',
+            'title': 'Nude snapchat girl put her panties to the side and rubbed her 18+ teen pussy',
             'age_limit': 18
         },
     }, {
@@ -38,7 +38,7 @@ class FKBAEIE(InfoExtractor):
 
         title = self._html_search_regex(r'<span class="fl-heading-text">(.+?)</span>', webpage, 'title')
 
-        #http_headers = {'Referer': 'https://fkbae.to/'}
+        http_headers = {'Referer': 'https://fkbae.to/'}
 
         return {
             'id': video_id,
